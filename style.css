@@ -1,8 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 10px;
-  background: #8E24AA;
-  background: linear-gradient(45deg,  #42a5f5 0%,#478ed1 50%,#0d47a1 100%);
+  background: #6cbfd9;
 }
 
 *, *:before, *:after {
@@ -12,7 +11,7 @@ html {
 body {
   margin:0;
   text-align: center;
-  font-family: 'Inconsolata', monospace;
+  font-family: monospace;
 }
 
 .display__time-left {
@@ -31,6 +30,9 @@ body {
 
 .timer__controls {
   display: flex;
+  flex-direction: column;
+  float: left;
+  width: 25vw;
 }
 
 .timer__controls > * {
@@ -59,7 +61,7 @@ body {
   border-bottom:3px solid rgba(0,0,0,0.2);
   border-right:1px solid rgba(0,0,0,0.2);
   padding:1rem;
-  font-family: 'Inconsolata', monospace;
+  font-family: monospace;
 }
 
 .timer__button:hover,
@@ -72,8 +74,7 @@ body {
   flex:1;
   display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  float:right;
 }
 
 .display__end-time {
