@@ -3,6 +3,9 @@ let countdown
 const timerDisplay = document.querySelector('.display__time-left');
 const endTime = document.querySelector('.display__end-time');
 const buttons = document.querySelectorAll('[data-time]');
+const done = `<embed src="done.wav" autostart="false" width="0" height="0" id="done"
+enablejavascript="true">`
+
 
 function timer(seconds) {
 	clearInterval(countdown);
@@ -14,6 +17,7 @@ function timer(seconds) {
 	countdown = setInterval(() => {
 	const secondsLeft = Math.round((then - Date.now()) / 1000);
 		if(secondsLeft < 0){
+			document.getElementById('sound').innerHTML = done;
 			clearInterval(countdown);
 			return;
 		}
