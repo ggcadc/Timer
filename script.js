@@ -42,6 +42,36 @@ function startTimer() {
 	const seconds = parseInt(this.dataset.time);
 	timer(seconds);
 }
+
+function decWork() {
+	const item = document.getElementById('work');
+	const dispTime = Number(item.innerHTML.substring(5)) - 1;
+	const dataTime = item.getAttribute('data-time');
+	item.setAttribute('data-time', Number(dataTime) - 60)
+	item.innerHTML = 'Work ' + dispTime
+}
+function incWork() {
+	const item = document.getElementById('work');
+	const dispTime = Number(item.innerHTML.substring(5)) + 1;
+	const dataTime = item.getAttribute('data-time');
+	item.setAttribute('data-time', Number(dataTime) + 60)
+	item.innerHTML = 'Work ' + dispTime
+}
+function decBreak() {
+	const item = document.getElementById('break');
+	const dispTime = Number(item.innerHTML.substring(5)) - 1;
+	const dataTime = item.getAttribute('data-time');
+	item.setAttribute('data-time', Number(dataTime) - 60)
+	item.innerHTML = 'Break ' + dispTime
+}
+function incBreak() {
+	const item = document.getElementById('break');
+	const dispTime = Number(item.innerHTML.substring(5)) + 1;
+	const dataTime = item.getAttribute('data-time');
+	item.setAttribute('data-time', Number(dataTime) + 60)
+	item.innerHTML = 'Break ' + dispTime
+}
+
 buttons.forEach(button => button.addEventListener('click', startTimer))
 document.customForm.addEventListener('submit', function(e) {
 	e.preventDefault();

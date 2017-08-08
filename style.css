@@ -70,6 +70,13 @@ body {
   outline:0;
 }
 
+.adjust {
+  background: none;
+  color: white;
+  border: 0;
+  padding: 5px;
+}
+
 .display {
   flex:1;
   display:flex;

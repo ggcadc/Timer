@@ -10,9 +10,16 @@
   <div class="timer">
     <div class="timer__controls">
       <button data-time="0" class="timer__button red">Stop</button>
-      <button data-time="1500" class="timer__button">Work 25</button>
-      <button data-time="300" class="timer__button">Break 5</button>
-      <button data-time="3600" class="timer__button">60 Minutes</button>
+      <div>
+        <button class="adjust" onclick=decWork()>-</button>
+        <button class="adjust" onclick="incWork()">+</button>
+      </div>
+      <button data-time="1500" class="timer__button" id="work">Work 25</button>
+      <button data-time="300" class="timer__button" id="break">Break 5</button>
+      <div>
+        <button class="adjust" onclick="decBreak()">-</button>
+        <button class="adjust" onclick="incBreak()">+</button>
+      </div>
       <form name="customForm" id="custom">
         <input type="text" name="minutes" placeholder="Enter Custom Time (mins)">
       </form>
